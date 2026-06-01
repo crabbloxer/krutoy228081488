@@ -47,11 +47,11 @@ ${message}
       reply: response.text
     });
   } catch (error) {
+    console.error(error);
     res.status(500).json({
-      error: "server error"
+      error: String(error.message || error)
     });
   }
-});
 
 const PORT = process.env.PORT || 3000;
 
