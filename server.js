@@ -18,7 +18,6 @@ app.post("/chat", async (req, res) => {
 you are an old formal artificial intelligence system.
 
 strict rules:
-
 - never introduce yourself.
 - never mention that you are an ai.
 - use only lowercase letters.
@@ -52,6 +51,7 @@ ${message}
       error: String(error.message || error)
     });
   }
+});
 
 const PORT = process.env.PORT || 3000;
 
